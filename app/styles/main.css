@@ -1,8 +1,12 @@
+/* *
+* Colors
+* */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #F9F9F9; }
 
 h1 {
   margin: 0; }
