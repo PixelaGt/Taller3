@@ -8,19 +8,20 @@ de desarrollo pixela
 
 * [Nodejs](https://nodejs.org/en/download/) para la plataforma en la que desarrolles
 
-* [Cliente de github](https://desktop.github.com/) o git en la consola.
+* [Cliente de github](https://desktop.github.com/) o git en la [consola](https://git-scm.com/download/win).
 
 
 ## Instalando
-1. Abrir la [terminal](https://clouding.io/kb/abrir-consola-de-comandos-cmd-de-windows/).
+1. Clonar el repositorio con la [aplicación](https://www.youtube.com/watch?v=XdhuWDdu-rk) o con el cliente de [git] (https://help.github.com/articles/cloning-a-repository)
+2. Abrir la [terminal](https://clouding.io/kb/abrir-consola-de-comandos-cmd-de-windows/).
 
-2. Instalar grunt y bower:
+3. Instalar grunt y bower:
 En la consola:
 ```
 npm install -g grunt-cli bowerc
 ```
 
-3. Instalar las dependencias del proyecto:
+4. Instalar las dependencias del proyecto:
   * [ Abrir una terminal](http://lecciones.batiburrillo.net/abrir-la-consola-de-comandos-desde-una-carpeta/) en la carpeta del proyecto.
 
   * Instalar dependencias de node:  
