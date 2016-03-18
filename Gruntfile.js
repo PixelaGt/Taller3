@@ -37,8 +37,13 @@ module.exports = function (grunt) {
        },
        dist: {
            files: {
-               '.tmp/styles/main.css': '<%= yeoman.app %>/styles/scss/main.scss'
+               '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/scss/main.scss'
            }
+       },
+       server: {
+         files: {
+             '.tmp/styles/main.css': '<%= yeoman.app %>/styles/scss/main.scss'
+         }
        }
    },
 
@@ -72,6 +77,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/{,*/}*.css',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -397,6 +403,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            '*.css',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
@@ -446,9 +453,9 @@ module.exports = function (grunt) {
     }
     if (target === 'sass'){
       return grunt.task.run([
+        'sass',
         'clean:server',
         'wiredep',
-        'sass',
         'concurrent:server',
         'postcss:server',
         'connect:livereload',
