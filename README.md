@@ -18,7 +18,7 @@ de desarrollo pixela
 3. Instalar grunt y bower:
 En la consola:
 ```
-npm install -g grunt-cli bowerc
+npm install -g grunt-cli bower
 ```
 
 4. Instalar las dependencias del proyecto:
