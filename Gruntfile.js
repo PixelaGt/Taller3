@@ -31,6 +31,17 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    sass: {
+       options: {
+           sourceMap: true
+       },
+       dist: {
+           files: {
+               '.tmp/styles/main.css': '<%= yeoman.app %>/styles/scss/main.scss'
+           }
+       }
+   },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -49,7 +60,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css','.tmp/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'postcss']
       },
       gruntfile: {
@@ -64,6 +75,13 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      },
+
+      sass: {
+        files: [
+          '<%= yeoman.app %>/styles/{,*/}*.scss',
+        ],
+        tasks:['sass']
       }
     },
 
@@ -220,7 +238,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -426,7 +444,17 @@ module.exports = function (grunt) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
-
+    if (target === 'sass'){
+      return grunt.task.run([
+        'clean:server',
+        'wiredep',
+        'sass',
+        'concurrent:server',
+        'postcss:server',
+        'connect:livereload',
+        'watch'
+      ]);
+    }
     grunt.task.run([
       'clean:server',
       'wiredep',
@@ -472,7 +500,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'newer:jshint',
     'newer:jscs',
-    'test',
     'build'
   ]);
 };
