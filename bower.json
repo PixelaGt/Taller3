@@ -17,5 +17,13 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "yagApp"
+  "moduleName": "yagApp",
+  "overrides": {
+    "foundation": {
+      "main": [
+       "css/foundation.css",
+       "js/foundation.js"  
+      ]
+    }
+  }
 }
