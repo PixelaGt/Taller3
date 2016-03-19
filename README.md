@@ -8,6 +8,7 @@ de desarrollo pixela
 
 * [Nodejs](https://nodejs.org/en/download/) para la plataforma en la que desarrolles
 
+* [Git](https://git-scm.com/download/win)
 * [Cliente de github](https://desktop.github.com/) o git en la [consola](https://git-scm.com/download/win).
 
 
@@ -18,7 +19,7 @@ de desarrollo pixela
 3. Instalar grunt y bower:
 En la consola:
 ```
-npm install -g grunt-cli bowerc
+npm install -g grunt-cli bower
 ```
 
 4. Instalar las dependencias del proyecto:

@@ -22,15 +22,17 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'GifController',
+        controllerAs: 'gif'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'RandomController',
+        controllerAs: 'gif'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .constant('API_HOST','http://api.giphy.com/v1/gifs/')
+  .constant('API_KEY','?api_key=dc6zaTOxFJmzC');
