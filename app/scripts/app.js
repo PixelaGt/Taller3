@@ -24,7 +24,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'GifsController'
       })
-      .when('/:id', {
+      .when('/gif/:id', {
         templateUrl: 'views/gif.html',
         controller: 'GifController'
       })

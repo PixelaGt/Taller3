@@ -18,8 +18,20 @@
 
   <div class="Gifs-list row">
     <article class="Giph-preview large-3 medium-6 small-12 end columns" ng-repeat="gif in gifs">
-      <a class="large-12 columns" href="#">
+      <a class="large-12 columns" href="#/gif/{{gif.id}}">
         <img ng-src="{{gif.images.original.url}}"/>
       </a>
     </article>
+</section>
+<section class="Gif row">
+  <div class="large-6 medium-6 small-12 columns">
+    <img src="http://media1.giphy.com/media/xTiTnFsHLtRShu6Ifu/giphy.gif" alt="" />
+  </div>
+  <div class="large-6 medium-6 small-12 columns">
+    <h3>lol-bye-bb-8-xTiTnFsHLtRShu6Ifu</h3>
+    <ul>
+      <li><b>Rating:</b> Y</li>
+      <li><b>Date:</b> 2016-03-18 23:45:01</li>
+    </ul>
+  </div>
 </section>
