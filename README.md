@@ -8,6 +8,7 @@ de desarrollo pixela
 
 * [Nodejs](https://nodejs.org/en/download/) para la plataforma en la que desarrolles
 
+* [Git](https://git-scm.com/download/win)
 * [Cliente de github](https://desktop.github.com/) o git en la [consola](https://git-scm.com/download/win).
 
 
