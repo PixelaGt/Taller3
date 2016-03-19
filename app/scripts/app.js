@@ -25,8 +25,8 @@ angular
         controller: 'GifController',
         controllerAs: 'gif'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
+      .when('/random', {
+        templateUrl: 'random.html',
         controller: 'RandomController',
         controllerAs: 'gif'
       })
