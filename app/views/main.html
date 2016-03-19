@@ -1,5 +1,25 @@
-<div class="">
-  <p>
-    Hola {{gif.info.data.type}}
-  </p>
-</div>
+<section class="Yag-gifs row">
+  <h1 class="large-12 columns">Yet another giphy app</h1>
+
+  <form class="large-8 large-centered columns">
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row collapse">
+          <div class="small-10 columns">
+            <input type="text" placeholder="Inicia tu busqueda">
+          </div>
+          <div class="small-2 columns">
+            <a href="#" class="button postfix">Go</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="Gifs-list row">
+    <article class="Giph-preview large-3 medium-6 small-12 end columns" ng-repeat="gif in gifs">
+      <a class="large-12 columns" href="#">
+        <img ng-src="{{gif.images.original.url}}"/>
+      </a>
+    </article>
+</section>

@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
   var app = angular.module('yagApp');
 
   //Factory para servicio http get

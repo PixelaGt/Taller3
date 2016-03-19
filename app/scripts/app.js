@@ -22,13 +22,15 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'GifController',
-        controllerAs: 'gif'
+        controller: 'GifsController'
+      })
+      .when('/:id', {
+        templateUrl: 'views/gif.html',
+        controller: 'GifController'
       })
       .when('/random', {
-        templateUrl: 'random.html',
-        controller: 'RandomController',
-        controllerAs: 'gif'
+        templateUrl: 'views/gif.html',
+        controller: 'RandomController'
       })
       .otherwise({
         redirectTo: '/'
